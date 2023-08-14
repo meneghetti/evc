@@ -1,0 +1,27 @@
+name: 'Evergreen Valley College Custom Theme'
+type: theme
+description: 'Custom theme for Evergreen Valley College Custom Theme.'
+'base theme': classy
+core: 8.x
+core_version_requirement: '^8 || ^9'
+libraries:
+  - 'evc/global-theming'
+  - core/popperjs
+  - evc/bootstrap
+  - evc/slick
+regions:
+  page_top: 'Page top'  
+  header: Header
+  primary_menu: 'Primary menu'
+  secondary_menu: 'Secondary menu'
+  search: 'Search Bar'
+  banner: Banners
+  breadcrumbs: 'Breadcrumbs'
+  content_top: 'Content Top'
+  sidebar: Sidebar
+  content: Content
+  footer_one: 'Footer One'
+  footer_two: 'Footer Two'
+  page_bottom: 'Page bottom'
+ckeditor_stylesheets:
+  - css/styles.css

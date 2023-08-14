@@ -1,0 +1,64 @@
+.block-views-blockrecent-news-recent-news {
+  margin: 25px 0;
+}
+
+#layout-container .view-recent-news {
+  .view-content {
+    display: flex;
+    gap: 30px;
+    max-width: 600px;
+    @include media-breakpoint-up(lg) {
+      display: block;
+    }
+  }
+  .views-row {
+    margin-bottom: 0;
+    @include media-breakpoint-up(lg) {
+      margin-bottom: 56px;
+    }
+    &:last-child {
+      @include media-breakpoint-up(lg) {
+        margin-bottom: 50px;
+      }
+    }
+  }
+  h2 {
+    font-size: 20px;
+    line-height: 30px;
+    @include media-breakpoint-up(lg) {
+      font-size: 24px;
+      line-height: 32px;
+    }
+  }
+  .recent-news-link {
+    font-family: $font-family-brandon;
+    line-height: 30px;
+    color: $gray-dark;
+    text-decoration: none;
+    letter-spacing: 0;
+    &:hover {
+      color: $green;
+    }
+    &::after {
+      display: none;
+    }
+    span {
+      display: block;
+      font-size: 20px;
+      line-height: 30px;
+      @include media-breakpoint-up(lg) {
+        font-size: 24px;
+        line-height: 32px;
+      }
+    }
+  }
+  .field--name-field-pub-date,
+  .field--name-body,
+  p {
+    font-size: 18px;
+    line-height: 27px;
+  }
+  .field--name-field-pub-date {
+    margin-bottom: 8px;
+  }
+}

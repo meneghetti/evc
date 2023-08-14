@@ -1,0 +1,50 @@
+{#
+/**
+ * @file
+ * Theme to display a dropdown menu.
+ *
+ * Available variables:
+ * - level: An incrementing value for each item child.
+ * - items: A nested list of menu items. Each menu item contains:
+ *   - attributes: HTML attributes for the menu item.
+ *   - below: The menu item child items.
+ *   - title: The menu link title.
+ *   - url: The menu link url, instance of \Drupal\Core\Url
+ *   - localized_options: Menu link localized options.
+ *   - is_expanded: TRUE if the link has visible children within the current
+ *     menu tree.
+ *   - is_collapsed: TRUE if the link has children within the current menu tree
+ *     that are not currently visible.
+ *   - in_active_trail: TRUE if the link is in the active trail.
+ */
+#}
+{% if items %}
+  {% block dropdown_menu %}
+    {% set nav_attributes = create_attribute() %}
+    {% set nav_classes = nav_classes|default(['dropdown-menu']) %}
+    <div{{ nav_attributes.addClass(nav_classes) }}>
+      {% for item in items %}
+        {% block dropdown_item %}
+          {% set link_attributes = {
+            'class': [
+              'dropdown-item',
+              item.in_active_trail ? 'active',
+              item.below ? 'dropdown-toggle',
+              item.url.getOption('attributes').class ? item.url.getOption('attributes').class | join(' '),
+            ]
+          } %}
+          {% if item.below %}
+            {% set link_attributes = link_attributes|merge({
+              'data-bs-toggle': 'dropdown',
+              'role': 'button',
+              'aria-expanded': 'false',
+              'aria-haspopup': 'true'
+            }) %}
+          {% endif %}
+          {{ link(item.title, item.url, link_attributes) }}
+          {% include '@evc/nav/base/base__menu-dropdown.html.twig' with {'items': item.below, level: level + 1} only %}
+        {% endblock %}
+      {% endfor %}
+    </div>
+  {% endblock %}
+{% endif %}

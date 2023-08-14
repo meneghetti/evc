@@ -1,0 +1,34 @@
+{% set bannerSize = (content.field_banner_size.0['#markup'] is not empty) ? content.field_banner_size.0['#markup'] : 'default' %}
+
+{% set classes = ['hero__block--' ~ bannerSize] %}
+
+<div{{ attributes.addClass(classes) }}>
+  {{ title_prefix }}
+  {{ title_suffix }}
+
+  {% block content %}
+  
+    {# Mobile image #}
+    {% if content.field_background_asset_mobile[0] %}
+      <div class="hero-banner hero-image jumbotron jumbotron-fluid d-block d-lg-none" style="background-image: url({{ file_url(content.field_background_asset_mobile[0]['#media'].field_media_image.entity.uri.value) }}); background-size: cover; background-position: center"></div>
+    {% else %}
+      <div class="hero-banner hero-image jumbotron jumbotron-fluid d-block d-lg-none" style="background-image: url({{ file_url(content.field_background_asset[0]['#media'].field_media_image.entity.uri.value) }}); background-size: cover; background-position: center"></div>
+    {% endif %}
+
+    {# Desktop image #}
+    <div class="hero-banner hero-image jumbotron jumbotron-fluid d-none d-lg-block" style="background-image: url({{ file_url(content.field_background_asset[0]['#media'].field_media_image.entity.uri.value) }}); background-size: cover; background-position: center"></div>
+
+    <div class="hero-banner hero-content jumbotron jumbotron-fluid">
+      <div class="container">
+        <div class="row">
+          <div role="banner" class="col-12 banner-wrapper">
+            <h1 class="banner-title">{{ content.field_title }}</h1>
+            <div class="banner-subtitle">{{ content.body }}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  {% endblock %}
+  
+</div>

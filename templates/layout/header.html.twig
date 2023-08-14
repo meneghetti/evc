@@ -1,0 +1,52 @@
+{{ attach_library('evc/header') }}
+<header class="{{ header_fixed ? 'fixed-top' }} w-100">
+
+  {% if page.header_top %}
+  <div class="{{ header_contained ? "container" : "container-fluid" }} position-relative ">
+    {{ page.header_top }}
+  </div>
+  {% endif %}
+
+  <div class="{{ header_navbar_bg ? header_navbar_bg }}">
+    <div class="{{ header_contained ? "container" : "container-fluid" }}">
+
+      {% set nav_attributes = create_attribute() %}
+      {% set nav_classes = [
+        'navbar',
+        'navbar-expand-lg',
+        'px-0',
+        'py-4',
+        header_navbar_type ? 'navbar-' ~ header_navbar_type,
+      ] %}
+
+      <nav {{ nav_attributes.addClass(nav_classes) }}>
+
+        {# logo - change if needs to be dynamic. #}
+        <a class="navbar-brand" href="/">
+          <img src="/{{ directory }}/logo.svg" alt="EVC">
+        </a>
+        {# <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+                aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse"> #}
+          {% if page.navigation %}
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasMainMenu" aria-labelledby="offcanvasExampleLabel">
+              <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasExampleLabel"></h5>
+                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+              </div>
+              <div class="offcanvas-body">
+                {% if page.search %}
+                    <p class="tag text-start">Search Here</p>
+                    {{ page.search }}
+                {% endif %}
+                {{ page.navigation }}
+              </div>
+            </div>
+          {% endif %}
+      </nav>
+    </div>
+  </div>
+
+</header>

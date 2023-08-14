@@ -1,0 +1,55 @@
+@media print {
+  *,
+  *::before,
+  *::after {
+    overflow: visible !important;
+    color: #000 !important;
+    background: transparent !important;
+  }
+
+  nav,
+  .nav,
+  header,
+  footer {
+    display: none !important;
+  }
+
+  .row {
+    display: block;
+  }
+
+  table {
+    border-collapse: collapse;
+
+    th,
+    td {
+      border: 1px solid #ddd;
+    }
+  }
+
+  body {
+    font-size: 0.75rem !important;
+  }
+
+  p {
+    margin-bottom: 0.625rem;
+    font-size: 0.688rem;
+  }
+
+  h1 {
+    font-size: 1.563rem !important;
+  }
+
+  h2 {
+    font-size: 1.125rem !important;
+  }
+
+  h3 {
+    font-size: 0.938rem !important;
+  }
+
+  h4,
+  h5 {
+    font-size: 0.875rem !important;
+  }
+}

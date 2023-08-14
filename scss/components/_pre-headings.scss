@@ -1,0 +1,34 @@
+.full-width-text-block,
+.statistics-block,
+.resources-block,
+.contact-block {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  .tag {
+    position: relative;
+    padding-top: 66px;
+    margin-bottom: 5px;
+    text-align: center;
+    text-transform: uppercase;
+    &::before {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      width: 1px;
+      height: 50px;
+      content: '';
+      background: $gray-line;
+    }
+  }
+  .heading {
+    margin-bottom: 30px;
+    text-align: center;
+    &::after {
+      position: relative;
+      color: $green;
+      content: '.';
+    }
+  }
+}

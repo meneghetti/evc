@@ -1,0 +1,69 @@
+.view-staff {
+  .view-header {
+    margin-bottom: 28px;
+    font-family: $font-family-brandon;
+    font-size: 18px;
+    font-weight: normal;
+    line-height: 27px;
+    color: $gray-dark;
+    letter-spacing: 0;
+  }
+  .view-content {
+    @include media-breakpoint-up(lg) {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+    > .views-row {
+      padding: 32px;
+      margin-bottom: 30px;
+      background: #edf2f1;
+      @include media-breakpoint-up(lg) {
+        width: calc((100% - 30px) / 2);
+        margin-bottom: 0;
+      }
+      .field--type-telephone-plus-field {
+        font-size: 0;
+        line-height: 0;
+        a,
+        p {
+          font-size: 16px;
+          line-height: 24px;
+        }
+      }
+    }
+  }
+  .pager__items {
+    padding-left: 0;
+    text-align: left;
+  }
+  .pager__item {
+    a {
+      font-family: $font-family-brandon;
+      font-size: 18px;
+      font-weight: normal;
+      line-height: 27px;
+      color: $gray-dark;
+      text-decoration: none;
+      letter-spacing: 0;
+      &:hover {
+        color: $green;
+        text-decoration: none;
+      }
+      &:hover::after {
+        display: none;
+      }
+    }
+    &.pager__item--first,
+    &.pager__item--last {
+      a {
+        letter-spacing: -5px;
+      }
+    }
+    &.is-active {
+      a {
+        color: $green;
+      }
+    }
+  }
+}

@@ -1,0 +1,32 @@
+
+// Allows coloring links from parents.
+
+@each $color, $value in $theme-colors {
+  .text-link-#{$color} {
+    a {
+      color: $value;
+      @if $link-shade-percentage != 0 {
+        &:hover,
+        &:focus {
+          color: if(color-contrast($value) == $color-contrast-light, shade-color($value, $link-shade-percentage), tint-color($value, $link-shade-percentage));
+        }
+      }
+    }
+  }
+}
+
+@mixin material-icons() {
+  display: inline-block;
+  font-family: 'Material Icons';
+  font-size: 24px;
+  font-style: normal;
+  font-weight: normal;
+  font-feature-settings: 'liga';
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  direction: ltr;
+  -moz-osx-font-smoothing: grayscale;
+  white-space: nowrap;
+}

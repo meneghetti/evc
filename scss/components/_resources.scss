@@ -1,0 +1,100 @@
+.resources-block {
+  margin: 15px 0;
+  h2.heading {
+    margin-bottom: 24px;
+    @include media-breakpoint-up(lg) {
+      margin-bottom: 42px;
+    }
+  }
+  .resources-wrapper > div {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10%;
+    justify-content: center;
+    @include media-breakpoint-up(lg) {
+      flex-wrap: nowrap;
+      gap: 0;
+    }
+    > .field__item {
+      position: relative;
+      flex-basis: 100%;
+      @include media-breakpoint-up(sm) {
+        flex-basis: 45%;
+      }
+      @include media-breakpoint-up(lg) {
+        flex-basis: 25%;
+      }
+      &:not(:first-child)::before {
+        position: absolute;
+        top: 5px;
+        left: -15%;
+        font-size: 28px;
+        color: $green;
+        content: '';
+        @include media-breakpoint-up(sm) {
+          content: '+';
+        }
+        @include media-breakpoint-up(lg) {
+          left: -4.75%;
+          font-size: 42px;
+        }
+      }
+      &:nth-child(3)::before {
+        content: '';
+        @include media-breakpoint-up(lg) {
+          content: '+';
+        }
+      }
+    }
+  }
+  .icon-and-link-wrapper {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 22px;
+    text-align: center;
+    @include media-breakpoint-up(sm) {
+      margin-bottom: 16px;
+    }
+    @include media-breakpoint-up(lg) {
+      margin-bottom: 0;
+    }
+    &:hover img[src$='.svg'] {
+      filter: invert(34%) sepia(13%) saturate(3720%) hue-rotate(105deg) brightness(92%) contrast(104%);
+    }
+    .icon-link {
+      flex-basis: 100%;
+      a {
+        padding-top: 56px;
+        @include media-breakpoint-up(lg) {
+          padding-top: 70px;
+        }
+      }
+    }
+    .icon-image {
+      position: absolute;
+      top: 0;
+      pointer-events: none;
+      img {
+        width: auto;
+        max-height: 46px;
+        @include media-breakpoint-up(lg) {
+          max-height: 56px;
+        }
+      }
+    }
+  }
+  .cta-wrapper {
+    margin-top: 5px;
+    text-align: center;
+    @include media-breakpoint-up(lg) {
+      margin-top: -11px;
+    }
+    .field__items {
+      display: inline-flex;
+      flex-wrap: wrap;
+      gap: 0 20px;
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{%
+  set classes = [
+    'paragraph',
+    'paragraph--type--' ~ paragraph.bundle|clean_class,
+    view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
+    not paragraph.isPublished() ? 'paragraph--unpublished'
+  ]
+%}
+{% block paragraph %}
+  <div{{ attributes.addClass(classes) }}>
+    {% block content %}
+      <div class="acc-container">
+        <div class="acc-heading-wrapper">
+          <h4 class="acc-heading">
+              {{ content.field_acc_item_heading.0 }}
+          </h4>
+          <button type="button" class="acc-button" aria-label="Expand and collapse toggle"></button>
+        </div>
+        <div class="acc-content">
+            {{ content.field_acc_item_content.0 }}
+        </div>
+      </div>
+    {% endblock %}
+  </div>
+{% endblock paragraph %}

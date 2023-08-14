@@ -1,0 +1,12 @@
+#block-gtranslate {
+  position: absolute;
+  top: 22px;
+  left: 18px;
+  @include media-breakpoint-up(lg) {
+    top: 50px;
+    left: 33px;
+  }
+  .gtflag:not(:last-child) {
+    padding-right: 3px !important;
+  }
+}

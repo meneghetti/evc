@@ -1,0 +1,59 @@
+{%
+  set classes = [
+    'block',
+    'block-' ~ configuration.provider|clean_class,
+    'block-' ~ plugin_id|clean_class,
+    'ping-pong-block'
+  ]
+%}
+
+{% set float = content.field_float[0]['#markup']|replace({' ': '-'})|lower %}
+
+<div{{ attributes.addClass(classes) }}>
+  {{ title_prefix }}
+  {% if label %}
+    <h2{{ title_attributes }}>{{ label }}</h2>
+  {% endif %}
+  {{ title_suffix }}
+  {% block content %}
+    {% if float == 'media-on-left' %}
+      <div class="ping-pong-wrapper {{ float }}">
+        <div class="media-wrapper">
+          {{ content.field_image_video }}
+        </div>
+        <div class="content-wrapper">
+          <div class="inner-content">
+            <h2 class="heading">{{ content.field_heading.0 }}</h2>
+            {% if content.field_content.0 %}
+              {{ content.field_content.0 }}
+            {% endif %}    
+            {% if content.field_resources %}
+              <div class="resources-wrapper">
+                {{ content.field_resources }}
+              </div>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    {% else %}
+      <div class="ping-pong-wrapper media-on-right">
+        <div class="content-wrapper">
+          <div class="inner-content">
+            <h2 class="heading">{{ content.field_heading.0 }}</h2>
+            {% if content.field_content.0 %}
+              {{ content.field_content.0 }}
+            {% endif %}    
+            {% if content.field_resources %}
+              <div class="resources-wrapper">
+                {{ content.field_resources }}
+              </div>
+            {% endif %}
+          </div>
+        </div>
+        <div class="media-wrapper">
+          {{ content.field_image_video }}
+        </div>
+      </div>
+    {% endif %}
+  {% endblock %}
+</div>

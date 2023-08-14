@@ -1,0 +1,37 @@
+global-theming:
+  version: VERSION
+  js:
+    js/scripts.js: {  }
+  css:
+    theme: { css/styles.css: {  }, css/ie.css: {  } }
+  dependencies:
+    - core/jquery
+    - core/jquery.once
+    - core/drupal
+    - core/drupal.debounce
+    - core/drupalSettings
+bootstrap:
+  version: VERSION
+  js:
+    /libraries/bootstrap/dist/js/bootstrap.min.js: { minified: true }
+toolbar:
+  version: VERSION
+  js:
+    js/toolbar.js: {  }
+header:
+  version: VERSION
+  js:
+    js/header.js: {  }
+  dependencies:
+    - core/jquery
+    - core/drupal
+    - core/drupal.debounce
+    - core/jquery.once
+slick:
+  version: VERSION
+  js:
+    js/slick.min.js: {}
+    js/slick.config.js: {}
+  dependencies:
+    - core/drupal
+    - core/jquery

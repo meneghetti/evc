@@ -1,0 +1,21 @@
+{% extends "page.html.twig" %}
+
+{#{% block page_header %}#}
+{#  {% set header_contained = false %}#}
+{#  {{ parent() }}#}
+{#{% endblock %}#}
+
+{% block page_body %}
+  {% set content_contained = false %}
+  {{ parent() }}
+
+  {#  {% block page_body_content %}#}
+  {#    {{ 'This content appears above our inherited parent() contents.' }}#}
+  {#    {{ parent() }}#}
+  {#  {% endblock %}#}
+{% endblock %}
+
+{#{% block page_footer %}#}
+{#  {% set footer_contained = false %}#}
+{#  {{ parent() }}#}
+{#{% endblock %}#}

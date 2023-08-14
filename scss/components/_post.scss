@@ -1,0 +1,17 @@
+.page-node-type-post {
+  .field--name-field-pub-date {
+    margin-top: -30px;
+    margin-bottom: 30px;
+    &::before {
+      margin-right: 10px;
+      font-weight: bold;
+      content: 'Publication Date: ';
+    }
+  }
+  .field--name-field-media-image {
+    margin-top: 30px;
+    @include media-breakpoint-up(lg) {
+      margin-top: 0;
+    }
+  }
+}

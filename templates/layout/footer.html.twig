@@ -1,0 +1,36 @@
+<footer>
+  <div class="py-3">
+    <div class="{{ footer_contained ? "container" : "container-fluid" }} border-top full-footer">
+      <div class="row">
+
+        {% if page.footer_one %}
+        <div class="col-12 col-lg text-link-light">
+          {{ page.footer_one }}
+        </div>
+        {% endif %}
+
+        {% if page.footer_two %}
+        <div class="col-12 col-lg text-link-light">
+          {{ page.footer_two }}
+        </div>
+        {% endif %}
+
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-copyright-wrapper container-fluid px-0 overflow-hidden bg-gray-light">
+    <div class="row">
+      <div class="col-12">
+        <div class="footer-copyright body1 container">
+          <div class="row">
+            <div class="col-12">
+              <p>Copyright © {{ "now"|date('Y') }} SJECCD. All rights reserved.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</footer>

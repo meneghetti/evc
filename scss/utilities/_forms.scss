@@ -1,0 +1,134 @@
+input[type='checkbox']:not([data-drupal-selector='edit-settings-label-display']):not([id^='edit-']) {
+  position: relative;
+  top: 2px;
+  left: 1px;
+  z-index: 10;
+  width: 18px;
+  height: 18px;
+  opacity: 0;
+
+  + label {
+    position: relative;
+    padding-left: 12px;
+    font-family: $font-family-brandon;
+    font-size: 18px;
+    font-weight: normal;
+    line-height: 43px;
+    color: $gray-dark;
+    letter-spacing: 0;
+  
+    &::before {
+      position: absolute;
+      top: 12px;
+      left: -17px;
+      width: 18px;
+      height: 18px;
+      pointer-events: none;
+      content: '';
+      border: solid 2px $gray;
+      border-radius: 2px;
+    }
+  }
+
+  &:checked + label {
+    &::before {
+      background-color: $green;
+      border-color: $green;
+    }
+
+    &::after {
+      position: absolute;
+      top: 12px;
+      left: -17px;
+      display: inline-block;
+      font-family: 'Material Icons';
+      font-size: 18px;
+      font-style: normal;
+      font-weight: bold;
+      line-height: 1;
+      color: $white;
+      text-transform: none;
+      letter-spacing: normal;
+      word-wrap: normal;
+      white-space: nowrap;
+      pointer-events: none;
+      content: 'done';
+      direction: ltr;
+    }
+  }
+}
+
+input[type='checkbox'] {
+  cursor: pointer;
+}
+
+input[type='text']:not([id^='edit-attributes']),
+input[type='email']:not([id^='edit-attributes']) {
+  min-height: 56px;
+  padding: 0 24px;
+  background-color: $white;
+  border: solid 2px $gray-light;
+  border-radius: 28px;
+}
+
+textarea {
+  min-height: 56px;
+  padding: 20px 24px;
+  background-color: $white;
+  border: solid 2px $gray-light;
+  border-radius: 28px;
+}
+
+.ui-widget input,
+.ui-widget select,
+.ui-widget textarea,
+.ui-widget button {
+  font-size: revert;
+}
+
+.webform-submission-contact-form {
+  padding: 20px 15px;
+  margin-top: 10px;
+  margin-bottom: 50px;
+  background: $green-light;
+  box-shadow: 100px 0 0 0 $green-light, -100px 0 0 0 $green-light;
+  @include media-breakpoint-up(sm) {
+    padding: 20px 0;
+    box-shadow: 450px 0 0 0 $green-light, -450px 0 0 0 $green-light;
+  }
+  label {
+    width: 100%;
+    margin-top: 5px;
+    margin-bottom: 8px;
+    font-family: $font-family-brandon;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 18px;
+    color: $gray-dark;
+    letter-spacing: 0;
+  }
+  input {
+    width: 100%;
+    border: 0 !important;
+    border-radius: 0 !important;
+  }
+  textarea {
+    width: 100%;
+    border: 0;
+    border-radius: 0;
+  }
+  .webform-button--submit {
+    width: auto;
+    padding: 0;
+    font-size: 20px;
+    font-weight: bold;
+    color: $green;
+    text-decoration: underline;
+    letter-spacing: 1px;
+    transition: opacity 200ms;
+    &:hover {
+      color: $green;
+      opacity: .6;
+    }
+  }
+}

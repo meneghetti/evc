@@ -1,0 +1,11 @@
+/**
+ * Custom IE styles, didn't warrant extra partials for now, so all here.
+ */
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+
+  // IE issues.
+  .ie-doesnt-work {
+    position: relative;
+  }
+}

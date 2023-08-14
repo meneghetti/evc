@@ -1,0 +1,75 @@
+.view-event-calendar {
+  overflow-x: auto;
+  > .view-content {
+    min-width: 700px;
+  }
+  .fc-content {
+    display: inline-grid;
+    max-width: 100%;
+    padding: 2px;
+    overflow: hidden;
+    font-weight: normal;
+    letter-spacing: normal;
+  }
+  .fc-day-grid-event {
+    background-color: $gray !important;
+  }
+  a {
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+    &::after {
+      display: none;
+    }
+  }
+  .fc-unthemed td.fc-today {
+    background: $gray-light;
+  }
+  .fc-button-primary:not(:disabled).fc-button-active,
+  .fc-button-primary:not(:disabled):active {
+    background-color: $gray;
+    border: 0;
+  }
+  .fc-button-primary {
+    color: $gray;
+    background-color: $gray-light;
+    border: 0;
+    border-color: $gray-light;
+  }
+  .fc-button-group>.fc-button.fc-button-active,
+  .fc-button-group>.fc-button:active,
+  .fc-button-group>.fc-button:focus,
+  .fc-button-group>.fc-button:hover {
+    z-index: auto;
+  }
+  .fc-button-group>.fc-button:hover {
+    text-decoration: underline;
+  }
+  .fc-button-primary:focus,
+  .fc-button:focus {
+    box-shadow: none;
+    box-shadow: none;
+  }
+  .fc-button-primary:not(:disabled).fc-button-active:focus,
+  .fc-button-primary:not(:disabled):active:focus {
+    box-shadow: none;
+    box-shadow: none;
+  }
+  .fc-time-grid-event {
+    background-color: $green !important;
+  }
+  .fc-event,
+  .fc-event-dot {
+    background-color: $green !important;
+    border: 0;
+  }
+  .fc-unthemed td.fc-today {
+    background: $green-light;
+  }
+  .fc .fc-row .fc-content-skeleton table,
+  .fc .fc-row .fc-content-skeleton td,
+  .fc .fc-row .fc-mirror-skeleton td {
+    border-color: inherit;
+  }
+}

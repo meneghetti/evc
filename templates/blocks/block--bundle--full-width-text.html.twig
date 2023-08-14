@@ -1,0 +1,24 @@
+{%
+  set classes = [
+    'block',
+    'block-' ~ configuration.provider|clean_class,
+    'block-' ~ plugin_id|clean_class,
+    'full-width-text-block'
+  ]
+%}
+<div{{ attributes.addClass(classes) }}>
+  {{ title_prefix }}
+  {% if label %}
+    <h2{{ title_attributes }}>{{ label }}</h2>
+  {% endif %}
+  {{ title_suffix }}
+  {% block content %}
+    {% if content.field_pre_heading.0 %}
+      <p class="tag">{{ content.field_pre_heading.0 }}</p>
+    {% endif %}
+    {% if content.field_heading.0 %}
+      <h2 class="heading">{{ content.field_heading.0 }}</h2>
+    {% endif %}
+    {{ content.body }}
+  {% endblock %}
+</div>

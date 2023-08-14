@@ -1,0 +1,11 @@
+{{ content.field_pub_date }}
+
+{% if label and not page %}
+  <h2>
+    <a class="recent-news-link" href="{{ url }}" rel="bookmark">{{ label }}</a>
+  </h2>
+{% endif %}
+
+<div{{ content_attributes.addClass('node__content') }}>
+  {{ content.body }}
+</div>

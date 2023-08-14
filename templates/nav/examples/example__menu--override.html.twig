@@ -1,0 +1,15 @@
+{% extends '@evc/nav/base/base__menu.html.twig' %}
+
+{% set nav_fill = true %}
+
+{% block nav_link %}
+  {# Example link override. #}
+  {% if item.url == '#' %}
+    <span class="fragment">{{ item.title }}</span>
+  {% else %}
+    {{ link(item.title, item.url, link_attributes) }}
+  {% endif %}
+
+  {# Use a custom template for sub-items. #}
+  {% include '@evc/nav/my-subnav-template.html.twig' with {'items': item.below, level: 2} only %}
+{% endblock %}

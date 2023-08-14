@@ -1,0 +1,127 @@
+.upcoming-events-block {
+  margin: 25px 0;
+}
+
+.view-upcoming-events {
+  max-width: 256px;
+  @include media-breakpoint-up(md) {
+    max-width: 700px;
+  }
+  .node--type-event {
+    min-height: 205px;
+    padding-top: 191px;
+    padding-bottom: 25px;
+    margin-bottom: 10px;
+    @include media-breakpoint-up(md) {
+      position: relative;
+      padding-top: 0;
+      padding-left: 286px;
+    }
+    .field--name-field-teaser-image {
+      position: absolute;
+      top: 0;
+      left: 0;
+      transition: opacity 200ms;
+      &:hover {
+        opacity: .8;
+      }
+    }
+    .field--name-title {
+      display: block;
+      font-size: 20px;
+      line-height: 30px;
+      @include media-breakpoint-up(md) {
+        padding-bottom: 10px;
+        font-size: 24px;
+        line-height: 32px;
+      }
+    }
+    .field--name-field-dates-and-times {
+      position: relative;
+      padding-bottom: 6px;
+      padding-left: 24px;
+      time {
+        font-size: 18px;
+      }
+      &::before {
+        position: absolute;
+        top: 4px;
+        left: 0;
+        width: 16px;
+        height: 16px;
+        content: '';
+        background-image: url('../images/date.svg');
+        background-repeat: no-repeat;
+      }
+      .field__item {
+        display: inline-block;
+      }
+    }
+    .field--name-field-event-location {
+      position: relative;
+      padding-left: 24px;
+      p,
+      a {
+        font-family: $font-family-latienne;
+        font-size: 18px;
+        font-weight: normal;
+        line-height: 27px;
+        word-break: break-word;
+      }
+      p::before {
+        position: absolute;
+        top: 4px;
+        left: 0;
+        width: 16px;
+        height: 16px;
+        content: '';
+        background-image: url('../images/location.svg');
+        background-repeat: no-repeat;
+      }
+    }
+    a {
+      display: inline;
+      color: $gray-dark;
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+      &::after {
+        display: none;
+      }
+    }
+  }
+  .pager__items {
+    padding-left: 0;
+    text-align: left;
+  }
+  .pager__item {
+    a {
+      font-family: $font-family-brandon;
+      font-size: 18px;
+      font-weight: normal;
+      line-height: 27px;
+      color: $gray-dark;
+      text-decoration: none;
+      letter-spacing: 0;
+      &:hover {
+        color: $green;
+        text-decoration: none;
+      }
+      &:hover::after {
+        display: none;
+      }
+    }
+    &.pager__item--first,
+    &.pager__item--last {
+      a {
+        letter-spacing: -5px;
+      }
+    }
+    &.is-active {
+      a {
+        color: $green;
+      }
+    }
+  }
+}

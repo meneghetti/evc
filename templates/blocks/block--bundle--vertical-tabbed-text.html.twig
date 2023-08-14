@@ -1,0 +1,21 @@
+{%
+  set classes = [
+    'block',
+    'block-' ~ configuration.provider|clean_class,
+    'block-' ~ plugin_id|clean_class,
+    'vertical-tabbed-text-block'
+  ]
+%}
+<div{{ attributes.addClass(classes) }}>
+  <div class="vertical-tabbed-text-index">
+    {{ title_prefix }}
+    {% if label %}
+      <h3{{ title_attributes }}>{{ label }}</h3>
+    {% endif %}
+    {{ title_suffix }}
+    {% block content %}
+      {{ content }}
+    {% endblock %}
+  </div>
+  <div class="vertical-tabbed-text-content"></div>
+</div>

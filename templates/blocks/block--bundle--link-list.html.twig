@@ -1,0 +1,18 @@
+{%
+  set classes = [
+    'block',
+    'block-' ~ configuration.provider|clean_class,
+    'block-' ~ plugin_id|clean_class,
+    'link-list-block'
+  ]
+%}
+<div{{ attributes.addClass(classes) }}>
+  {{ title_prefix }}
+  {% if label %}
+    <h3{{ title_attributes }}>{{ label }}</h3>
+  {% endif %}
+  {{ title_suffix }}
+  {% block content %}
+      {{ content }}
+  {% endblock %}
+</div>

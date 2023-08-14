@@ -1,0 +1,19 @@
+{% if label %}
+  <h4>{{ label }}</h4>
+{% endif %}
+{% if content.field_job_title.0 %}
+  <div class="job-title">{{ content.field_job_title.0 }}</div>
+{% endif %}
+{% if content.field_credentials.0 %}
+  <div class="credentials">{{ content.field_credentials.0 }}</div>
+{% endif %}
+<hr>
+{% if content.field_email_address.0 %}
+  <a class="email" href="mailto:{{ content.field_email_address.0 }}">{{ content.field_email_address.0 }}</a>
+{% endif %}
+{% if content.field_phone %}
+  {{ content.field_phone }}
+{% endif %}
+{% if content.field_person_location.0 %}
+  <div class="location">{{ content.field_person_location.0 }}</div>
+{% endif %}

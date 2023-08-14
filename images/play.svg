@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="123px" height="123px" viewBox="0 0 123 123" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>7713D171-CD40-4D0C-87B4-F2282BC07DC2</title>
+    <defs>
+        <filter x="-40.6%" y="-40.3%" width="181.2%" height="180.5%" filterUnits="objectBoundingBox" id="filter-1">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="7" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.6 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+    </defs>
+    <g id="UI-Kit" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="EVC_UIKit_Icons" transform="translate(-81.000000, -621.000000)">
+            <g id="play" filter="url(#filter-1)" transform="translate(104.000000, 644.000000)">
+                <ellipse id="Oval" fill="#007438" fill-rule="nonzero" cx="38.1709402" cy="38.5" rx="38.1709402" ry="38.5"></ellipse>
+                <polygon id="Triangle" fill="#FFFFFF" transform="translate(42.777778, 38.500000) rotate(90.000000) translate(-42.777778, -38.500000) " points="42.7777778 28.957265 56.5982906 48.042735 28.957265 48.042735"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

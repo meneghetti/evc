@@ -1,0 +1,29 @@
+.region.region-content-top {
+  padding: 15px 0;
+}
+
+.breadcrumbs {
+  min-height: 59px;
+  padding-top: 15px;
+  background: $gray-light;
+  ol {
+    width: 100%;
+  }
+  li {
+    position: relative;
+    font-size: 18px;
+    line-height: 27px;
+    &:not(:first-child) {
+      padding-left: 21px;
+    }
+    &::before {
+      position: absolute;
+      top: -7px;
+      left: 0;
+      padding: 8px 6px;
+      font-size: 11px;
+      line-height: 24px;
+      content: ' / ';
+    }
+  }
+}

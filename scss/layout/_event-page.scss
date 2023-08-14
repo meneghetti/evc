@@ -1,0 +1,45 @@
+.page-node-type-event {
+  .field--name-field-links,
+  .field--name-field-event-attachment {
+    margin-top: 25px;
+    a {
+      font-size: 17px;
+      text-decoration: underline;
+      &:hover {
+        text-decoration: underline;
+      }
+      &::after {
+        display: none;
+      }
+    }
+  }
+  .field--name-field-event-attachment {
+    .file_size {
+      &::before {
+        content: '(';
+      }
+      &::after {
+        content: ')';
+      }
+    }
+    thead,
+    tbody,
+    tfoot,
+    tr,
+    td,
+    th {
+      padding: 0;
+      line-height: 30px;
+      border: 0;
+    }
+    thead {
+      display: none;
+    }
+    tr {
+      td + td,
+      th + th {
+        display: none;
+      }
+    }
+  }
+}

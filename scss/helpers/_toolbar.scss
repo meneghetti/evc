@@ -1,0 +1,4 @@
+// Toolbar is 502, system tray is 501.
+header.fixed-top {
+  z-index: 500;
+}

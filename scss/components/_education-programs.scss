@@ -1,0 +1,71 @@
+#layout-container .view-education-programs {
+  h2 {
+    font-size: 48px;
+    line-height: 30px;
+  }
+  .view-header {
+    margin-bottom: 14px;
+    font-family: $font-family-brandon;
+    font-size: 18px;
+    font-weight: normal;
+    line-height: 27px;
+    color: $gray-dark;
+    letter-spacing: 0;
+  }
+  .node--type-program {
+    padding-bottom: 10px;
+    margin-bottom: 22px;
+    border-bottom: solid 1px #979797;
+  }
+  a {
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline !important;
+    }
+    &::after {
+      display: none;
+    }
+  }
+  .field--name-title {
+    display: block;
+    font-family: $font-family-brandon;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 30px;
+    color: $gray-dark;
+    letter-spacing: 1px;
+  }
+  .pager__items {
+    padding-left: 0;
+    text-align: left;
+  }
+  .pager__item {
+    a {
+      font-family: $font-family-brandon;
+      font-size: 18px;
+      font-weight: normal;
+      line-height: 27px;
+      color: $gray-dark;
+      text-decoration: none;
+      letter-spacing: 0;
+      &:hover {
+        color: $green;
+        text-decoration: none;
+      }
+      &:hover::after {
+        display: none;
+      }
+    }
+    &.pager__item--first,
+    &.pager__item--last {
+      a {
+        letter-spacing: -5px;
+      }
+    }
+    &.is-active {
+      a {
+        color: $green;
+      }
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{%
+  set classes = [
+    'paragraph',
+    'paragraph--type--' ~ paragraph.bundle|clean_class,
+    view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
+    not paragraph.isPublished() ? 'paragraph--unpublished'
+  ]
+%}
+{% block paragraph %}
+  <div{{ attributes.addClass(classes) }}>
+    {% block content %}
+      <div class="facts-wrapper">
+        <p class="number">{{ content.field_fact_value.0 }}</p>
+        <p class="body2">{{ content.field_fact_description.0 }}</p>
+      </div>
+    {% endblock %}
+  </div>
+{% endblock paragraph %}

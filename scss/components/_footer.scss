@@ -1,0 +1,78 @@
+#layout-container footer {
+  h2 {
+    margin-top: 32px;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 32px;
+    @include media-breakpoint-up(lg) {
+      margin-top: 20px;
+    }
+  }
+  h4 {
+    margin-bottom: 1rem;
+  }
+  p {
+    margin-bottom: 0;
+    font-size: 18px;
+    line-height: 2.25rem;
+  }
+  a[title='Twitter'],
+  a[title='Facebook'],
+  a[title='Instagram'],
+  a[title='LinkedIn'] {
+    display: inline-block;
+    margin-right: 19px;
+    font-size: 0;
+    color: $green;
+    background-repeat: no-repeat;
+    transition: opacity 200ms;
+    &:hover {
+      opacity: .6;
+    }
+  }
+
+  a[title='Twitter'] {
+    width: 19px;
+    height: 16px;
+    background-image: url('../images/twitter.svg');
+    background-size: 19px 16px;
+  }
+
+  a[title='Facebook'] {
+    width: 10px;
+    height: 16px;
+    background-image: url('../images/facebook.svg');
+    background-size: 10px 16px;
+  }
+
+  a[title='Instagram'] {
+    width: 16px;
+    height: 16px;
+    background-image: url('../images/instagram.svg');
+    background-size: 16px 16px;
+  }
+
+  a[title='LinkedIn'] {
+    width: 17px;
+    height: 16px;
+    background-image: url('../images/linkedin.svg');
+    background-size: 17px 16px;
+  }
+
+  .full-footer {
+    @include media-breakpoint-up(lg) {
+      padding-top: 32px;
+    }
+  }
+
+  .footer-copyright {
+    padding: 16px 12px;
+    p {
+      margin-bottom: 0;
+      font-size: 16px;
+      line-height: 1.5rem;
+      color: $gray;
+    }
+  }
+
+}

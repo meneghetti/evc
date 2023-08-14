@@ -1,0 +1,104 @@
+article[about='/search-documents'],
+article[about='/documents-search'] {
+  .facet-block:last-child {
+    margin-bottom: 25px;
+    @include media-breakpoint-up(lg) {
+      margin-bottom: 41px;
+    }
+  }
+  .block-facets-block + .block-facets-block {
+    .facet-block {
+      padding: 0;
+      margin-bottom: 30px;
+      background: none;
+      @include media-breakpoint-up(lg) {
+        margin-bottom: 0;
+      }
+    }
+    .facet-block__title {
+      margin-bottom: 16px;
+      font-family: $font-family-latienne;
+      font-size: 18px;
+      font-weight: normal;
+      line-height: 27px;
+      color: $gray-dark;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+  }
+}
+
+.view-documents-search {
+  .view-header {
+    margin-bottom: 23px;
+  }
+  .views-row {
+    padding-bottom: 24px;
+    margin-bottom: 32px;
+    border-bottom: solid 1px $gray-line;
+    @include media-breakpoint-up(lg) {
+      position: relative;
+    }
+  }
+  .file {
+    padding-left: 0;
+    background-image: none;
+    a {
+      color: $gray-dark;
+      text-decoration: none;
+      letter-spacing: 1px;
+      &:hover {
+        text-decoration: underline;
+      }
+      &::after {
+        display: none;
+      }
+    }
+  }
+  .file_size {
+    display: block;
+    margin-top: 8px;
+    font-family: $font-family-latienne;
+    font-size: 18px;
+    font-weight: normal;
+    line-height: 27px;
+    color: $gray-dark;
+    letter-spacing: 0;
+    @include media-breakpoint-up(lg) {
+      width: 200px;
+    }
+    &::before {
+      content: 'Size: ';
+    }
+  }
+  .views-field-field-document-tags {
+    @include media-breakpoint-up(lg) {
+      position: absolute;
+      right: 0;
+      bottom: 25px;
+      width: calc(100% - 200px);
+      text-align: right;
+    }
+    a {
+      padding-right: 16px;
+      font-family: $font-family-brandon;
+      font-size: 18px;
+      font-weight: normal;
+      line-height: 27px;
+      color: $green;
+      text-decoration: none;
+      letter-spacing: 0;
+      pointer-events: none;
+      &:last-child {
+        padding-right: 0;
+      }
+      &:hover {
+        text-decoration: underline;
+      }
+      &::after {
+        display: none;
+      }
+    }
+
+  }
+}

@@ -1,0 +1,54 @@
+.statistics-block {
+  h2.heading {
+    margin-bottom: 22px;
+    @include media-breakpoint-up(lg) {
+      margin-bottom: 55px;
+    }
+  }
+  .statistics-wrapper > div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    .field__item {
+      flex: 1 1 100%;
+      @include media-breakpoint-up(sm) {
+        flex: 1 1 50%;
+      }
+      @include media-breakpoint-up(lg) {
+        flex: 0 0 33.333333%;
+      }
+      .facts-wrapper {
+        max-width: 400px;
+        padding: 0 15px;
+        margin-right: auto;
+        margin-bottom: 6px;
+        margin-left: auto;
+        text-align: center;
+        @include media-breakpoint-up(sm) {
+          padding: 0 15px;
+        }
+        @include media-breakpoint-up(lg) {
+          margin-bottom: 72px;
+        }
+      }
+      .number {
+        margin-bottom: 6px;
+        @include media-breakpoint-up(lg) {
+          margin-bottom: 9px;
+        }
+      }
+    }
+  }
+  .cta-wrapper {
+    margin-top: 16px;
+    text-align: center;
+    @include media-breakpoint-up(lg) {
+      margin-top: -38px;
+    }
+    .field__items {
+      display: inline-flex;
+      flex-wrap: wrap;
+      gap: 0 20px;
+    }
+  }
+}

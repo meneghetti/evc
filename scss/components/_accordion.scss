@@ -1,0 +1,54 @@
+#layout-container .accordion-block {
+  h3 {
+    margin-bottom: 30px;
+  }
+  .field--name-field-cta {
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 0 20px;
+  }
+}
+
+.acc-container {
+  max-width: 100%;
+  padding-bottom: 15px;
+  margin-bottom: 30px;
+  border-bottom: solid 1px #d3d3d3;
+  .acc-heading-wrapper {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    .acc-heading {
+      margin-bottom: 0;
+    }
+    .acc-button {
+      width: 32px;
+      height: 32px;
+      background: url('../images/expand-off.svg');
+      border: 0;
+    }
+    &:hover:not(.expanded) {
+      .acc-button {
+        background: url('../images/expand-on.svg');
+      }
+    }
+    &:hover,
+    &.expanded {
+      .acc-heading {
+        color: $green;
+      }
+    }
+    &.expanded {
+      .acc-button {
+        background: url('../images/collapse.svg');
+      }
+    }
+  }
+  .acc-content {
+    display: none;
+    padding-top: 20px;
+    padding-bottom: 2px;
+  }
+}

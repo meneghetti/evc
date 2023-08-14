@@ -1,0 +1,43 @@
+{#
+/**
+ * @file
+ * Theme to display a dropdown menu.
+ *
+ * Available variables:
+ * - level: An incrementing value for each item child.
+ * - items: A nested list of menu items. Each menu item contains:
+ *   - attributes: HTML attributes for the menu item.
+ *   - below: The menu item child items.
+ *   - title: The menu link title.
+ *   - url: The menu link url, instance of \Drupal\Core\Url
+ *   - localized_options: Menu link localized options.
+ *   - is_expanded: TRUE if the link has visible children within the current
+ *     menu tree.
+ *   - is_collapsed: TRUE if the link has children within the current menu tree
+ *     that are not currently visible.
+ *   - in_active_trail: TRUE if the link is in the active trail.
+ */
+#}
+{% if items %}
+  {% block nested_menu %}
+    {% set nav_attributes = create_attribute() %}
+    {% set nav_classes = nav_classes|default(['nested-nav', 'nav', 'ps-3']) %}
+    <ul{{ nav_attributes.addClass(nav_classes) }}>
+      {% for item in items %}
+        {% block nested_item %}
+          <li class="nav-item {{ item.in_active_trail ? 'active' }}">
+            {% set link_attributes = {
+              'class': [
+                'nav-link',
+                item.in_active_trail ? 'active',
+                item.url.getOption('attributes').class ? item.url.getOption('attributes').class | join(' '),
+              ]
+            } %}
+            {{ link(item.title, item.url, link_attributes) }}
+            {% include '@evc/nav/base/base__menu-nested.html.twig' with {'items': item.below, level: level + 1} only %}
+          </li>
+        {% endblock %}
+      {% endfor %}
+    </ul>
+  {% endblock %}
+{% endif %}

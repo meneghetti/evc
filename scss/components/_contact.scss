@@ -1,0 +1,106 @@
+.contact-block {
+  h2 {
+    margin-bottom: 46px;
+    text-align: center;
+  }
+  hr {
+    width: 50px;
+    margin: 24px 0;
+  }
+  .field--name-field-people {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    > .field__item {
+      width: 100%;
+      padding: 32px;
+      background: $green-light;
+      @include media-breakpoint-up(lg) {
+        width: calc((100% - 60px) / 3);
+      }
+    }
+  }
+}
+
+.field--name-title {
+  display: table-caption;
+  font-size: 24px;
+  line-height: 32px;
+}
+
+.email {
+  position: relative;
+  padding-bottom: 6px;
+  padding-left: 32px;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  color: inherit;
+  text-decoration: inherit;
+  letter-spacing: inherit;
+  &::before {
+    position: absolute;
+    top: 4px;
+    left: 0;
+    width: 15px;
+    height: 15px;
+    content: '';
+    background-image: url('../images/email.svg');
+    background-repeat: no-repeat;
+    background-size: 15px;
+  }
+  &::after {
+    display: none;
+  }
+}
+
+.field--name-field-phone {
+  position: relative;
+  padding-bottom: 6px;
+  padding-left: 32px;
+  &::before {
+    position: absolute;
+    top: 4px;
+    left: 0;
+    width: 15px;
+    height: 15px;
+    content: '';
+    background-image: url('../images/phone.svg');
+    background-repeat: no-repeat;
+    background-size: 15px;
+  }
+  a {
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+    color: inherit;
+    text-decoration: inherit;
+    letter-spacing: inherit;
+    &::after {
+      display: none;
+    }
+    &:hover {
+      color: $green;
+    }
+  }
+}
+
+.location {
+  position: relative;
+  padding-bottom: 6px;
+  padding-left: 32px;
+  &::before {
+    position: absolute;
+    top: 4px;
+    left: 0;
+    width: 15px;
+    height: 15px;
+    content: '';
+    background-image: url('../images/place.svg');
+    background-repeat: no-repeat;
+    background-size: 15px;
+  }
+}

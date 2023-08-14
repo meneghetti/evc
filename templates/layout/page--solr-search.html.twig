@@ -1,0 +1,32 @@
+{% extends "page.html.twig" %}
+
+{% block page_banner %}
+  <div class="admin-banner"></div>
+{% endblock %}
+
+  {% block page_body %}
+    {% if page.content_top and not is_front %}
+      <div class="content-top">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              {{ page.content_top }}
+            </div>
+          </div>
+        </div>
+      </div>
+    {% endif %}
+
+    <main role="main" class="container pt-2 pb-5">
+      <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
+      <div class="{{ content_contained ? "container" : "container-fluid" }} px-0">
+        {% block page_body_content %}
+          {% if page.content %}
+            <div class="col-12 col-lg">
+              {{ page.content }}
+            </div>
+          {% endif %}
+        {% endblock %}
+      </div>
+    </main>
+  {% endblock %}

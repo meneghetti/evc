@@ -1,0 +1,56 @@
+header {
+  z-index: 10;
+  > .container {
+    @include media-breakpoint-up(xxl) {
+      max-width: 1286px;
+    }
+  }
+  #block-sitebranding {
+    transition: opacity 200ms;
+    img {
+      width: 148px;
+      @include media-breakpoint-up(lg) {
+        width: 256px;
+      }
+    }
+  }
+  nav.navbar {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    @include media-breakpoint-up(lg) {
+      padding-top: 2rem;
+      padding-bottom: 2rem;
+    }
+    .navbar-toggler {
+      margin-top: 2px;
+      border: 0;
+      transition: opacity 200ms;
+      &:hover {
+        opacity: .6;
+      }
+      &:focus {
+        outline: auto;
+        box-shadow: none;
+      }
+      .toggler-bar {
+        width: 16px;
+        height: 2px;
+        margin: 2px 0;
+        background-color: $white;
+        @include media-breakpoint-up(lg) {
+          width: 21px;
+          height: 3px;
+        }
+      }
+    }
+    #open-main-nav {
+      @include media-breakpoint-up(lg) {
+        width: 45px;
+        height: 47px;
+      }
+    }
+    .header-right {
+      display: flex;
+    }
+  }
+}

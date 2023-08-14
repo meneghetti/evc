@@ -1,0 +1,194 @@
+/*
+ * The Typekit service used to deliver this font or fonts for use on websites
+ * is provided by Adobe and is subject to these Terms of Use
+ * http://www.adobe.com/products/eulas/tou_typekit. For font license
+ * information, see the list below.
+ *
+ * latienne-pro:
+ *   - http://typekit.com/eulas/00000000000000007735a469
+ *   - http://typekit.com/eulas/00000000000000007735a464
+ *   - http://typekit.com/eulas/00000000000000007735a46f
+ *   - http://typekit.com/eulas/00000000000000007735a46a
+ *
+ * © 2009-2021 Adobe Systems Incorporated. All Rights Reserved.
+ */
+/*{"last_published":"2021-04-15 06:46:41 UTC"}*/
+
+@import url('https://p.typekit.net/p.css?s=1&k=yyh8kye&ht=tk&f=23550.23555.23556.23559&a=24057650&app=typekit&e=css');
+
+@font-face {
+  font-family: 'latienne-pro';
+  src:
+    url('https://use.typekit.net/af/596810/00000000000000007735a469/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3')
+    format('woff2'),
+    url('https://use.typekit.net/af/596810/00000000000000007735a469/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3')
+    format('woff'),
+    url('https://use.typekit.net/af/596810/00000000000000007735a469/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3')
+    format('opentype');
+  font-display: auto;
+  font-style: normal;
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'latienne-pro';
+  src:
+    url('https://use.typekit.net/af/7e5290/00000000000000007735a464/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3')
+    format('woff2'),
+    url('https://use.typekit.net/af/7e5290/00000000000000007735a464/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3')
+    format('woff'),
+    url('https://use.typekit.net/af/7e5290/00000000000000007735a464/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3')
+    format('opentype');
+  font-display: auto;
+  font-style: normal;
+  font-weight: 700;
+}
+@font-face {
+  font-family: 'latienne-pro';
+  src:
+    url('https://use.typekit.net/af/e9a317/00000000000000007735a46f/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3')
+    format('woff2'),
+    url('https://use.typekit.net/af/e9a317/00000000000000007735a46f/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3')
+    format('woff'),
+    url('https://use.typekit.net/af/e9a317/00000000000000007735a46f/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3')
+    format('opentype');
+  font-display: auto;
+  font-style: italic;
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'latienne-pro';
+  src:
+    url('https://use.typekit.net/af/3c2324/00000000000000007735a46a/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3')
+    format('woff2'),
+    url('https://use.typekit.net/af/3c2324/00000000000000007735a46a/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3')
+    format('woff'),
+    url('https://use.typekit.net/af/3c2324/00000000000000007735a46a/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3')
+    format('opentype');
+  font-display: auto;
+  font-style: italic;
+  font-weight: 700;
+}
+
+.latienne-pro {
+  font-family: 'latienne-pro', serif;
+}
+
+@font-face {
+  font-family: 'Brandon Text';
+  font-style: normal;
+  font-weight: 900;
+  src:
+    url('fonts/BrandonText-Black.woff2') format('woff2'), url('fonts/BrandonText-Black.woff') format('woff'),
+    url('fonts/BrandonText-Black.ttf') format('truetype'),
+    url('fonts/BrandonText-Black.svg#BrandonText-Black') format('svg');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Brandon Text';
+  font-style: normal;
+  font-weight: bold;
+  src:
+    url('fonts/BrandonText-Bold.woff2') format('woff2'), url('fonts/BrandonText-Bold.woff') format('woff'),
+    url('fonts/BrandonText-Bold.ttf') format('truetype'),
+    url('fonts/BrandonText-Bold.svg#BrandonText-Bold') format('svg');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Brandon Text';
+  font-style: normal;
+  font-weight: 500;
+  src:
+    url('fonts/BrandonText-Medium.woff2') format('woff2'), url('fonts/BrandonText-Medium.woff') format('woff'),
+    url('fonts/BrandonText-Medium.ttf') format('truetype'),
+    url('fonts/BrandonText-Medium.svg#BrandonText-Medium') format('svg');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Brandon Text';
+  font-style: normal;
+  font-weight: 300;
+  src:
+    url('fonts/BrandonText-Light.woff2') format('woff2'), url('fonts/BrandonText-Light.woff') format('woff'),
+    url('fonts/BrandonText-Light.ttf') format('truetype'),
+    url('fonts/BrandonText-Light.svg#BrandonText-Light') format('svg');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Brandon Text';
+  font-style: normal;
+  font-weight: normal;
+  src:
+    url('fonts/BrandonText-Regular.woff2') format('woff2'), url('fonts/BrandonText-Regular.woff') format('woff'),
+    url('fonts/BrandonText-Regular.ttf') format('truetype'),
+    url('fonts/BrandonText-Regular.svg#BrandonText-Regular') format('svg');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Brandon Text';
+  font-style: italic;
+  font-weight: 500;
+  src:
+    url('fonts/BrandonText-MediumItalic.woff2') format('woff2'),
+    url('fonts/BrandonText-MediumItalic.woff') format('woff'),
+    url('fonts/BrandonText-MediumItalic.ttf') format('truetype'),
+    url('fonts/BrandonText-MediumItalic.svg#BrandonText-MediumItalic') format('svg');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Brandon Text';
+  font-style: italic;
+  font-weight: 300;
+  src:
+    url('fonts/BrandonText-LightItalic.woff2') format('woff2'),
+    url('fonts/BrandonText-LightItalic.woff') format('woff'),
+    url('fonts/BrandonText-LightItalic.ttf') format('truetype'),
+    url('fonts/BrandonText-LightItalic.svg#BrandonText-LightItalic') format('svg');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Brandon Text';
+  font-style: italic;
+  font-weight: bold;
+  src:
+    url('fonts/BrandonText-BoldItalic.woff2') format('woff2'),
+    url('fonts/BrandonText-BoldItalic.woff') format('woff'),
+    url('fonts/BrandonText-BoldItalic.ttf') format('truetype'),
+    url('fonts/BrandonText-BoldItalic.svg#BrandonText-BoldItalic') format('svg');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Brandon Text';
+  font-style: italic;
+  font-weight: normal;
+  src:
+    url('fonts/BrandonText-RegularItalic.woff2') format('woff2'),
+    url('fonts/BrandonText-RegularItalic.woff') format('woff'),
+    url('fonts/BrandonText-RegularItalic.ttf') format('truetype'),
+    url('fonts/BrandonText-RegularItalic.svg#BrandonText-RegularItalic') format('svg');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Brandon Text';
+  font-style: italic;
+  font-weight: 100;
+  src:
+    url('fonts/BrandonText-ThinItalic.woff2') format('woff2'),
+    url('fonts/BrandonText-ThinItalic.woff') format('woff'),
+    url('fonts/BrandonText-ThinItalic.ttf') format('truetype'),
+    url('fonts/BrandonText-ThinItalic.svg#BrandonText-ThinItalic') format('svg');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Brandon Text';
+  font-style: normal;
+  font-weight: 100;
+  src:
+    url('fonts/BrandonText-Thin.woff2') format('woff2'), url('fonts/BrandonText-Thin.woff') format('woff'),
+    url('fonts/BrandonText-Thin.ttf') format('truetype'),
+    url('fonts/BrandonText-Thin.svg#BrandonText-Thin') format('svg');
+  font-display: swap;
+}
+
+.brandon-text {
+  font-family: 'Brandon Text', serif;
+}

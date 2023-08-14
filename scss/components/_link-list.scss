@@ -1,0 +1,15 @@
+.link-list-block {
+  width: 350px;
+  max-width: 100%;
+  padding: 24px 24px 5px;
+  margin: 30px 0;
+  background: $gray-light;
+  h3 {
+    margin-bottom: 24px;
+  }
+  .field--name-field-cta {
+    .field__item {
+      padding: 8px 0;
+    }
+  }
+}

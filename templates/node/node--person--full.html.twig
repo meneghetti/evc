@@ -1,0 +1,100 @@
+<div class="container person-wrapper">
+  <div class="row">
+    {% if content.field_job_title.0 %}
+      <h2 class="person-job-title">
+        {{ content.field_job_title }}
+      </h2>
+    {% endif %}      
+
+    <div class="person-top">
+      {% if content.field_departments.0 %}
+        <div class="person-item person-department">
+          <h3>{{ content.field_departments['#title'] }}</h3>
+          {{ content.field_departments.0 }}
+        </div>
+      {% endif %}     
+
+      {% if content.field_links.0 %}
+        <div class="person-item person-website">
+          <h3>{{ content.field_links['#title'] }}</h3>
+          {{ content.field_links }}
+        </div>
+      {% endif %} 
+
+      {% if content.field_phone.0 %}
+        <div class="person-item person-phone">
+          <h3>{{ content.field_phone['#title'] }}</h3>        
+          {{ content.field_phone }}
+        </div>
+      {% endif %}
+
+      {% if content.field_email_address.0 %}
+        <div class="person-item person-email">
+          <h3>{{ content.field_email_address['#title'] }}</h3>
+          <a href="mailto:{{ content.field_email_address.0 }}">
+            {{ content.field_email_address.0 }}
+          </a>
+        </div>
+      {% endif %}
+
+      {% if content.field_person_location.0 %}
+        <div class="person-item person-location">
+          <h3>{{ content.field_person_location['#title'] }}</h3>        
+          {{ content.field_person_location }}
+        </div>
+      {% endif %}
+    </div>
+
+    <div class="person-accordion">
+
+      {% if content.body.0 %}
+        <div class="acc-container">
+          <div class="acc-heading-wrapper">
+            <h4 class="acc-heading">{{ content.body['#title'] }}</h4>
+            <button type="button" class="acc-button" aria-label="Expand and collapse toggle"></button>
+          </div>
+          <div class="acc-content">
+              {{ content.body }}
+          </div>
+        </div>
+      {% endif %}
+
+      {% if content.field_publications.0 %}
+        <div class="acc-container">
+          <div class="acc-heading-wrapper">
+            <h4 class="acc-heading">{{ content.field_publications['#title'] }}</h4>
+            <button type="button" class="acc-button" aria-label="Expand and collapse toggle"></button>
+          </div>
+          <div class="acc-content">
+              {{ content.field_publications }}
+          </div>
+        </div>
+      {% endif %}
+
+      {% if content.field_courses_taught.0 %}
+        <div class="acc-container">
+          <div class="acc-heading-wrapper">
+            <h4 class="acc-heading">{{ content.field_courses_taught['#title'] }}</h4>
+            <button type="button" class="acc-button" aria-label="Expand and collapse toggle"></button>
+          </div>
+          <div class="acc-content">
+              {{ content.field_courses_taught }}
+          </div>
+        </div>
+      {% endif %}
+
+      {% if content.field_attachments.0 %}
+        <div class="acc-container">
+          <div class="acc-heading-wrapper">
+            <h4 class="acc-heading">{{ content.field_attachments['#title'] }}</h4>
+            <button type="button" class="acc-button" aria-label="Expand and collapse toggle"></button>
+          </div>
+          <div class="acc-content">
+              {{ content.field_attachments }}
+          </div>
+        </div>
+      {% endif %}      
+
+    </div>
+  </div>
+</div>

@@ -1,0 +1,123 @@
+.facets-widget-links ul[data-drupal-facet-id='file_categories'] {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 32px;
+  justify-content: center;
+  margin-top: -16px;
+  margin-bottom: -16px;
+  @include media-breakpoint-up(lg) {
+    gap: 5px 64px;
+  }
+  a {
+    font-family: $font-family-brandon;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 30px;
+    color: $gray-dark;
+    letter-spacing: 0;
+    @include media-breakpoint-up(lg) {
+      font-size: 24px;
+      line-height: 32px;
+    }
+  }
+  .facet-item__status + .facet-item__value {
+    color: $green;
+    text-decoration: underline;
+  }
+  .facet-item__status {
+    display: none;
+  }
+}
+
+.block-views-blockfile-listing-file-listing {
+  text-align: center;
+  .view-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0 32px;
+    margin-bottom: 16px;
+    text-align: left;
+    > .views-row {
+      position: relative;
+      display: flex;
+      align-items: center;
+      width: 100%;
+      min-height: 128px;
+      padding-top: 18px;
+      padding-bottom: 18px;
+      padding-left: 42px;
+      margin-bottom: 15px;
+      background: $white;
+      @include media-breakpoint-up(lg) {
+        width: calc((100% - 64px) / 3);
+        &:last-child {
+          margin-bottom: 15px;
+        }
+      }
+      &::after {
+        @include media-breakpoint-up(lg) {
+          position: absolute;
+          top: 50%;
+          left: -27px;
+          width: 20px;
+          height: 20px;
+          content: '';
+          background: url('../images/expand-on.svg');
+          background-repeat: no-repeat;
+          background-size: 22px;
+          transform: translateY(-50%);
+        }
+      }
+      &:nth-child(3n - 2) {
+        &::after {
+          display: none;
+        }
+      }
+      &::before {
+        position: absolute;
+        top: 49%;
+        left: 26px;
+        width: 46px;
+        height: 46px;
+        content: '';
+        background-image: url('../images/pdf-file.svg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        transform: translateY(-50%);
+      }
+    }
+    .file {
+      max-width: calc(100% - 25px);
+      padding-left: 48px;
+      background: none !important;
+    }
+    .file_size {
+      display: inline-block;
+      padding-left: 48px;
+      &::before {
+        content: '(';
+      }
+      &::after {
+        content: ')';
+      }
+    }
+    a {
+      font-size: 20px;
+      font-weight: bold;
+      line-height: 24px;
+      color: $gray-dark;
+      text-decoration: none;
+      letter-spacing: 1px;
+      word-break: break-word;
+      &:hover {
+        text-decoration: underline;
+      }
+      &::after {
+        display: none;
+      }
+    }
+  }
+  > a {
+    margin-bottom: 60px;
+  }
+}

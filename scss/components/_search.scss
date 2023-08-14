@@ -1,0 +1,104 @@
+#layout-container .search-block-form {
+  @include media-breakpoint-up(lg) {
+    width: 413px;
+  }
+  h2 {
+    font-family: $font-family-brandon;
+    font-size: 18px;
+    font-weight: normal;
+    line-height: 27px;
+    color: $gray;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+}
+
+.search-link {
+  position: relative;
+  a.nav-link {
+    width: 64px;
+    color: transparent !important;
+    &::after {
+      position: absolute;
+      top: 8px;
+      display: block;
+      width: 32px;
+      height: 32px;
+      content: '';
+      background: url('/themes/custom/evc/images/search.svg') no-repeat center;
+    }
+  }
+}
+
+#search-block-form {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 8px 0 20px;
+  margin-bottom: 30px;
+  background-color: $white;
+  border-radius: 28px;
+  transition: box-shadow .5s;
+  &.highlight {
+    box-shadow: 0 0 15px -10px #000;
+  }
+  .form-type-search {
+    flex-grow: 1 !important;
+    margin: 0;
+    .form-search {
+      width: 100%;
+      border: 0;
+      border-radius: 0;
+      outline: none;
+    }
+  }
+  input {
+    border: 0;
+    &.form-submit {
+      font-family: $font-family-brandon;
+      font-size: 20px;
+      font-weight: bold;
+      line-height: 30px;
+      color: $primary;
+      text-decoration: underline;
+      letter-spacing: 1px;
+      background: none;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 1px;
+      transition: opacity 200ms;
+      &:hover {
+        opacity: .6;
+      }
+    }
+  }
+  input[type='search'] {
+    position: relative;
+    box-sizing: border-box;
+    height: 56px;
+    padding: 0 0 0 50px;
+    background: none;
+    border: solid 2px $gray-light;
+    border-radius: 28px;
+  }
+  &::before {
+    position: absolute;
+    top: 12px;
+    left: 27px;
+    z-index: 10;
+    display: inline-block;
+    font-family: 'Material Icons';
+    font-size: 32px;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    color: $gray-dark;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    pointer-events: none;
+    content: 'search';
+    direction: ltr;
+  }
+}

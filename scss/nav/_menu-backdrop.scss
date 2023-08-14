@@ -1,0 +1,14 @@
+#menu-backdrop {
+  position: fixed;
+  z-index: 10;
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.65);
+}
+
+.no-scroll {
+  position: fixed;
+  width: 100%;
+  overflow-y: scroll;
+}
